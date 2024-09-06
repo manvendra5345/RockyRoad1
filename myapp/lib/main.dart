@@ -9,6 +9,7 @@ import 'pages/cold_storage.dart';
 import 'pages/cold_storage_specific.dart';
 import 'pages/inventory_specific.dart';
 import 'pages/item_details.dart';
+import 'pages/helbot.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LanguageSelectionScreen(), // Call the LoginPage widget
+      home: const ChatApp(), // Call the LoginPage widget
     );
   }
 }
