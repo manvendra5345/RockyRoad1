@@ -19,13 +19,14 @@ class DashboardPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
+        toolbarHeight: 250,
         title: const Row(
           children: [
             CircleAvatar(
               backgroundImage: NetworkImage(
                   'https://via.placeholder.com/50'), // Placeholder for user image
             ),
-            SizedBox(width: 10),
+            SizedBox(width: 16),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

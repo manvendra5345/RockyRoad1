@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
 class CartPage extends StatelessWidget {
+  const CartPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Text("My Cart"),
+        title: const Text("My Cart"),
         backgroundColor: Colors.green,
       ),
       body: Container(
         color: Colors.green[100],
         child: ListView(
-          children: [
+          children: const [
             CartItem(
               itemName: "Turmeric",
               price: "200.00",
@@ -50,53 +52,54 @@ class CartItem extends StatelessWidget {
   final String quantity;
   final String pricePerItem;
 
-  CartItem({
+  const CartItem({
+    Key? key,
     required this.itemName,
     required this.price,
     required this.quantity,
     required this.pricePerItem,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16.0),
-      padding: EdgeInsets.all(16.0),
+      margin: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Row(
         children: [
-          Container(
+          SizedBox(
             height: 80,
             width: 80,
             child: Image.asset("assets/turmeric.png"),
           ),
-          SizedBox(width: 16.0),
+          const SizedBox(width: 16.0),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   itemName,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 8.0),
-                Text(
+                const SizedBox(height: 8.0),
+                const Text(
                   "Samraat Farms - Chennai",
                   style: TextStyle(
                     fontSize: 14.0,
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: 8.0),
+                const SizedBox(height: 8.0),
                 Text(
                   "Quantity: $quantity",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14.0,
                   ),
                 ),
@@ -108,23 +111,23 @@ class CartItem extends StatelessWidget {
             children: [
               Text(
                 price,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 8.0),
+              const SizedBox(height: 8.0),
               Text(
                 pricePerItem,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14.0,
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(height: 8.0),
+              const SizedBox(height: 8.0),
               TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Remove",
                   style: TextStyle(
                     color: Colors.red,
@@ -140,16 +143,18 @@ class CartItem extends StatelessWidget {
 }
 
 class OrderSummary extends StatelessWidget {
+  const OrderSummary({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16.0),
-      padding: EdgeInsets.all(16.0),
+      margin: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -204,11 +209,12 @@ class OrderSummaryItem extends StatelessWidget {
   final String value;
   final bool isTotal;
 
-  OrderSummaryItem({
+  const OrderSummaryItem({
+    Key? key,
     required this.label,
     required this.value,
     this.isTotal = false,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +223,7 @@ class OrderSummaryItem extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16.0,
           ),
         ),

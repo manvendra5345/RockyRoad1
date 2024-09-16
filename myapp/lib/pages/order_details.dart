@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 
 class OrderDetailScreen extends StatelessWidget {
+  const OrderDetailScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             // Implement navigation back action
           },
         ),
-        title: Text("Order Detail"),
+        title: const Text("Order Detail"),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 200,
               child: Image.asset('assets/images/map.png'),
             ),
@@ -25,39 +27,39 @@ class OrderDetailScreen extends StatelessWidget {
               child: Column(
                 children: [
                   _buildOrderStep(
-                    icon: Icon(Icons.circle, color: Colors.green),
+                    icon: const Icon(Icons.circle, color: Colors.green),
                     title: "Order Placement",
                     description:
                         "The seller or e-commerce platform receives the order.",
                   ),
                   _buildOrderStep(
-                    icon: Icon(Icons.circle, color: Colors.green),
+                    icon: const Icon(Icons.circle, color: Colors.green),
                     title: "Order Processing",
                     description: "The seller begins processing the order.",
                   ),
                   _buildOrderStep(
-                    icon: Icon(Icons.circle, color: Colors.green),
+                    icon: const Icon(Icons.circle, color: Colors.green),
                     title: "Packaging",
                     description: "The ordered items are securely packaged.",
                   ),
                   _buildOrderStep(
-                    icon: Icon(Icons.circle, color: Colors.green),
+                    icon: const Icon(Icons.circle, color: Colors.green),
                     title: "Shipping",
                     description:
                         "The packaged items are handed to the courier.",
                   ),
                   _buildOrderStep(
-                    icon: Icon(Icons.circle, color: Colors.grey),
+                    icon: const Icon(Icons.circle, color: Colors.grey),
                     title: "Transit",
                     description: "The provider delivers the package.",
                   ),
                   _buildOrderStep(
-                    icon: Icon(Icons.circle, color: Colors.grey),
+                    icon: const Icon(Icons.circle, color: Colors.grey),
                     title: "Delivery",
                     description:
                         "The package arrives at the destination address.",
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   ElevatedButton(
                     onPressed: () {
                       // Implement download invoice action
@@ -65,7 +67,7 @@ class OrderDetailScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
                     ),
-                    child: Text("Download Invoice"),
+                    child: const Text("Download Invoice"),
                   ),
                 ],
               ),
@@ -87,18 +89,18 @@ class OrderDetailScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           icon,
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(description),
               ],
             ),

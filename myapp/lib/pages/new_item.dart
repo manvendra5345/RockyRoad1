@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/themes/colors.dart';
 
 class NewItemPage extends StatelessWidget {
   const NewItemPage({Key? key}) : super(key: key);

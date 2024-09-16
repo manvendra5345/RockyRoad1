@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,13 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Aggregationservice(title: 'Flutter Demo Home Page'),
+      home: const Aggregationservice(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class Aggregationservice extends StatefulWidget {
-  Aggregationservice({Key? key, required this.title}) : super(key: key);
+  const Aggregationservice({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -32,7 +34,7 @@ class _AggregationserviceState extends State<Aggregationservice> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {},
         ),
         title: Text(widget.title),
@@ -51,15 +53,15 @@ class _AggregationserviceState extends State<Aggregationservice> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'SPLIT BILLS FOR COMMON SERVICES',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,
                     ),
                   ),
-                  SizedBox(height: 8.0),
-                  Row(
+                  const SizedBox(height: 8.0),
+                  const Row(
                     children: [
                       Icon(Icons.info_outline),
                       Expanded(
@@ -73,40 +75,40 @@ class _AggregationserviceState extends State<Aggregationservice> {
                       Icon(Icons.arrow_forward_ios),
                     ],
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         width: 10.0,
                         height: 10.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.grey,
                           shape: BoxShape.circle,
                         ),
                       ),
-                      SizedBox(width: 4.0),
+                      const SizedBox(width: 4.0),
                       Container(
                         width: 10.0,
                         height: 10.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.grey,
                           shape: BoxShape.circle,
                         ),
                       ),
-                      SizedBox(width: 4.0),
+                      const SizedBox(width: 4.0),
                       Container(
                         width: 10.0,
                         height: 10.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.grey,
                           shape: BoxShape.circle,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 16.0),
-                  Text(
+                  const SizedBox(height: 16.0),
+                  const Text(
                     'Sort by Name',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -140,7 +142,7 @@ class _AggregationserviceState extends State<Aggregationservice> {
             ),
             Container(
               padding: const EdgeInsets.all(16.0),
-              child: Text(
+              child: const Text(
                 '- END OF LIST -',
                 style: TextStyle(
                   fontSize: 12.0,
@@ -153,17 +155,17 @@ class _AggregationserviceState extends State<Aggregationservice> {
               child: Center(
                 child: FloatingActionButton(
                   onPressed: () {},
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Container(
               padding: const EdgeInsets.all(16.0),
               child: Center(
                 child: FloatingActionButton(
                   onPressed: () {},
-                  child: Icon(Icons.mic),
+                  child: const Icon(Icons.mic),
                 ),
               ),
             ),
@@ -179,37 +181,37 @@ class _AggregationserviceState extends State<Aggregationservice> {
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
-            Icon(Icons.people),
-            SizedBox(width: 16.0),
+            const Icon(Icons.people),
+            const SizedBox(width: 16.0),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,
                     ),
                   ),
-                  SizedBox(height: 4.0),
+                  const SizedBox(height: 4.0),
                   Text(
                     people,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14.0,
                     ),
                   ),
-                  SizedBox(height: 4.0),
+                  const SizedBox(height: 4.0),
                   Text(
                     description,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12.0,
                     ),
                   ),
                 ],
               ),
             ),
-            Icon(Icons.arrow_forward_ios),
+            const Icon(Icons.arrow_forward_ios),
           ],
         ),
       ),

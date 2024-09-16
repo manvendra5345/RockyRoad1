@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 class LanguageSelectionScreen extends StatefulWidget {
   const LanguageSelectionScreen({Key? key}) : super(key: key);
@@ -30,12 +30,7 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
           icon: const Icon(Icons.arrow_back),
         ),
         title: const Text("WELCOME"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.menu),
-          )
-        ],
+        centerTitle: true,
       ),
       backgroundColor: Colors.lightGreen[100],
       body: Padding(
@@ -110,3 +105,4 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
     );
   }
 }
+*/

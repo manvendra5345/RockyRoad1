@@ -36,12 +36,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Login App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Aggregationservice(
-        title: '',
-      ), // Call the LoginPage widget
+
+      home: const MyHomePage(), // Call the LoginPage widget
     );
   }
 }

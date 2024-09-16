@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'language_selection_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,17 @@ class MyHomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const LanguageSelectionPage2(),
+            ),
+          );
+        },
+        child: const Icon(Icons.subdirectory_arrow_right),
       ),
     );
   }
